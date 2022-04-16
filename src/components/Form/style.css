@@ -1,0 +1,67 @@
+.leftFromWrapper {
+  width: 70%;
+  float: left;
+}
+.rightFromWrapper {
+  width: 27%;
+  float: right;
+}
+
+.error-input {
+  border: solid red 1px;
+}
+
+.normal-input {
+  border: solid #666 1px;
+}
+.error-message {
+  padding: 10px;
+  color: red;
+  font-size: 18px;
+  position: relative;
+  float: left;
+  clear: both;
+}
+
+.leftFromWrapper input {
+  width: 100%;
+  min-width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.input-button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  width: 20%;
+  min-width: 150px;
+  height: 60px;
+  border-radius: 10px;
+  margin-top: 27px;
+  margin-left: 25px;
+  padding: 10px;
+  background-color: #00b0ff;
+  color: #fff;
+  font-weight: bold;
+  border: solid #666 1px;
+  font-size: 24px;
+}
+
+.input-button:hover {
+  color: #00b0ff;
+  background-color: #fff;
+}
+
+/* On screens that are 499px or less, set the background color to blue */
+@media screen and (max-width: 499px) {
+  .input-text,
+  .search-form .error-p {
+    width: 100%;
+  }
+  .input-button {
+    width: 30%;
+    min-width: 100px;
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+}

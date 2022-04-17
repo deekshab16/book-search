@@ -46,6 +46,22 @@
   border: solid #666 1px;
   font-size: 24px;
 }
+.disable-button {
+  cursor: not-allowed;
+  -webkit-appearance: none;
+  width: 20%;
+  min-width: 150px;
+  height: 60px;
+  border-radius: 10px;
+  margin-top: 27px;
+  margin-left: 25px;
+  padding: 10px;
+  background-color: #eee;
+  color: #baadad;
+  font-weight: bold;
+  border: solid #666 1px;
+  font-size: 24px;
+}
 
 .input-button:hover {
   color: #00b0ff;

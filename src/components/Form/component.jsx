@@ -2,9 +2,20 @@ import "./style.css";
 import PropTypes from "prop-types";
 
 const Form = (props) => {
-  const { handleBlur, handleChange, handleSubmit, errors, isValid, values } =
-    props;
+  const {
+    dirty,
+    data,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    errors,
+    isValid,
+    values,
+  } = props;
 
+  const { isLoading } = data;
+
+  const disableButton = isLoading || !dirty;
   return (
     <>
       <div className="leftFromWrapper">
@@ -25,8 +36,8 @@ const Form = (props) => {
       <div className="rightFormWrapper">
         <input
           type="button"
-          className="input-button"
-          value="Search"
+          className={disableButton ? "disable-button" : "input-button"}
+          value={isLoading ? "Searching..." : "Search"}
           onClick={handleSubmit}
         />
       </div>
@@ -35,6 +46,7 @@ const Form = (props) => {
 };
 
 Form.propTypes = {
+  dirty: PropTypes.bool.isRequired,
   handleBlur: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
   handleChange: PropTypes.func.isRequired,

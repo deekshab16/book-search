@@ -19,12 +19,15 @@ const Form = (props) => {
   return (
     <>
       <div className="leftFromWrapper">
-        <label htmlFor="searchbox">Search Book</label>
+        <label for="searchbox">Search Book</label>
         <input
           className={isValid ? "normal-input" : "error-input"}
           autoFocus
+          placeholder="enter book title"
           type="text"
           name="searchbook"
+          id="search-book"
+          aria-label="search-book"
           value={values.searchbook}
           onChange={handleChange}
           onBlur={handleBlur}

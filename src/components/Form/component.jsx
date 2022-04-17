@@ -19,7 +19,7 @@ const Form = (props) => {
   return (
     <>
       <div className="leftFromWrapper">
-        <label for="searchbox">Search Book</label>
+        <label htmlFor="searchbox">Search Book</label>
         <input
           className={isValid ? "normal-input" : "error-input"}
           autoFocus
@@ -31,6 +31,11 @@ const Form = (props) => {
           value={values.searchbook}
           onChange={handleChange}
           onBlur={handleBlur}
+          onKeyPress={(e) => {
+            if (e.key === "Enter") {
+              handleSubmit();
+            }
+          }}
         />
         {errors && errors.searchbook && (
           <span className="error-message">{errors.searchbook}</span>

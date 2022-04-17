@@ -29,7 +29,7 @@ export const setBookData = (data) => {
 export const fetchSearchData = (title) => {
   return (dispatch) => {
     dispatch(fetchDataPending());
-    const url = `http://openlibrary.org/search.json?title=${title}`;
+    const url = `https://openlibrary.org/search.json?title=${title}`;
 
     axios.get(url).then((response) => {
       if (response.status === 200) {

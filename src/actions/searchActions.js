@@ -52,6 +52,7 @@ export const fetchSearchData = (title) => {
               };
               booksData.push(book);
             }
+            return booksData;
           });
         dispatch(setBookData(booksData));
       } else {

@@ -15,6 +15,7 @@ const Form = (props) => {
 
   const { isLoading } = data;
 
+  // disable button when form submitted or when the form is not dirty
   const disableButton = isLoading || !dirty;
   return (
     <>
@@ -37,6 +38,8 @@ const Form = (props) => {
             }
           }}
         />
+
+        {/* display errors if any */}
         {errors && errors.searchbook && (
           <span className="error-message">{errors.searchbook}</span>
         )}

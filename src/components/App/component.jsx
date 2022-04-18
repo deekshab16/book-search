@@ -10,8 +10,12 @@ const App = (props) => {
   return (
     <div className="Wrapper">
       <h1>Book Search App </h1>
+
+      {/* Search component */}
       <Form {...props} />
+
       <div className="clear" />
+      {/* Display info screen for the first time */}
       {visibleHomeScreen ? (
         <HomeScreen />
       ) : isLoading ? (
